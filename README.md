@@ -30,17 +30,17 @@ The prefix used for the next examples is `MM`
 
 
 ## Remindme Syntax
-| Part | Description |
-| --- | --- |
-|MMremindme    | Command                                     |
-|"0.1/mama mo" | Argument                                    |
+| Part          | Description                                 |
+| ------------- | ------------------------------------------- |
+|MMremindme     | Command                                     |
+|"0.1/mama mo"  | Argument                                    |
 
-| Argument Part | Description |
-| --- | --- |
-|""            | container of the whole argument             |
-|0.1           | number, in hours                            |
-|/             | delimiter for splitting time from message   |
-|mama mo       | string to be printed after X hours          |
+| Argument Part | Description                                 |
+| ------------- | ------------------------------------------- |
+|""             | container of the whole argument             |
+|0.1            | number, in hours                            |
+|/              | delimiter for splitting time from message   |
+|mama mo        | string to be printed after X hours          |
 
 
 ## To Do
