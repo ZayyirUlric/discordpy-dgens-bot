@@ -28,8 +28,10 @@ The prefix used for the next examples is `MM`
 ## Remindme Syntax
 | Part | Description |
 | --- | --- |
-|MMremindme    | command                                     |
-|"0.1/mama mo" | argument                                    |
+|MMremindme    | Command                                     |
+|"0.1/mama mo" | Argument                                    |
+
+| Argument Part | Description |
 |""            | container of the whole argument             |
 |0.1           | number, in hours                            |
 |/             | delimiter for splitting time from message   |
