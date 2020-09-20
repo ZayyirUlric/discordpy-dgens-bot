@@ -2,7 +2,6 @@ import csv
 import asyncio
 import discord
 import time
-from threading import Timer
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='<PREFIX>')
