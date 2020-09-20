@@ -7,11 +7,9 @@ To use, replace the following:
 <PATH_TO_DIR> with where your python script is.
 
 # The DGENs Bot Command List and Description
-------------------------------------------------------------
 
 
 ## Commands Available
-------------------------------------------------------------
 remindme      -> tags user after X hours
        ---> MMremindme "<hours>/<message>"
 switch        -> switches "Mama mo mode" on and off. Guild specific.
@@ -20,13 +18,10 @@ print         -> prints a message in an embed
        ---> MMprint <message>
 
 
-## Common Syntax
-------------------------------------------------------------
+## Remindme Syntax
 MMremindme    -> command
 "0.1/mama mo" -> argument 
 ""            -> container of the whole argument
 0.1           -> number, in hours
 /             -> delimiter for splitting time from message 
 mama mo       -> string to be printed after X hours
-
-v1.02
