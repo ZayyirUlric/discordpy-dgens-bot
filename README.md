@@ -23,13 +23,15 @@ To use, replace the following:
 
 
 ## Remindme Syntax
+| Part | Description |
+| --- | --- |
+|MMremindme    | command                                     |
+|"0.1/mama mo" | argument                                    |
+|""            | container of the whole argument             |
+|0.1           | number, in hours                            |
+|/             | delimiter for splitting time from message   |
+|mama mo       | string to be printed after X hours          |
 
-MMremindme    -> command
-"0.1/mama mo" -> argument 
-""            -> container of the whole argument
-0.1           -> number, in hours
-/             -> delimiter for splitting time from message 
-mama mo       -> string to be printed after X hours
 
 ## To Do
 
