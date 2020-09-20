@@ -9,6 +9,8 @@ To use, replace the following:
 - \<PREFIX> with your preferred prefix.
 - \<PATH_TO_DIR> with where your python script is.
 
+The prefix used for the examples is "MM"
+
 ## Commands Available
 
 1. remindme
