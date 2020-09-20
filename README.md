@@ -5,11 +5,11 @@ The bot has some basic functions, mostly for entertainment.
 The bot was made using the `discord-py`, `csv`, `asyncio`, and `time` Python libraries.
 
 To use, replace the following:
-- \<TOKEN> with your bot's token.
-- \<PREFIX> with your preferred prefix.
-- \<PATH_TO_DIR> with where your python script is.
+- `<TOKEN>` with your bot's token.
+- `<PREFIX>` with your preferred prefix.
+- `<PATH_TO_DIR>` with where your python script is.
 
-The prefix used for the examples is "MM"
+The prefix used for the next examples is `MM`
 
 ## Commands Available
 
@@ -17,7 +17,8 @@ The prefix used for the examples is "MM"
    - tags user after X hours
      - MMremindme "\<hours>\/\<message>\"
 2. switch        
-   - switches "Mama mo mode" on and off. Guild specific.
+   - switches `Mama mo mode` on and off. Guild specific.
+   - `Mama mo mode` when on repeates the last message with `mama mo` prefixing the message.
      - MMswitch on|off 
 3. print         
    - prints a message in an embed
