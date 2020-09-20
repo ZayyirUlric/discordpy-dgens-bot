@@ -1,18 +1,16 @@
-# discordpy-dgens-bot
 The bot has some basic functions, mostly for entertainment.
+The bot was made using the discord-py, csv, asyncio, and time Python libraries.
 
 To use, replace the following:
 <TOKEN> with your bot's token.
 <PREFIX> with your preferred prefix.
 <PATH_TO_DIR> with where your python script is.
 
-The DGENs Bot Command List
+# The DGENs Bot Command List and Description
 ------------------------------------------------------------
 
-global prefix == MM
 
-
-Commands Available
+## Commands Available
 ------------------------------------------------------------
 remindme      -> tags user after X hours
        ---> MMremindme "<hours>/<message>"
@@ -22,7 +20,7 @@ print         -> prints a message in an embed
        ---> MMprint <message>
 
 
-Common Syntax
+## Common Syntax
 ------------------------------------------------------------
 MMremindme    -> command
 "0.1/mama mo" -> argument 
