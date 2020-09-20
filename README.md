@@ -9,6 +9,10 @@ To use, replace the following:
 - `<PREFIX>` with your preferred prefix.
 - `<PATH_TO_DIR>` with where your python script is.
 
+The bot has some features like:
+- Guild-specific states for commands like `switch`.
+- An actually helpful remindme command that pings the user after X-hours.
+
 The prefix used for the next examples is `MM`
 
 ## Commands Available
@@ -32,6 +36,7 @@ The prefix used for the next examples is `MM`
 |"0.1/mama mo" | Argument                                    |
 
 | Argument Part | Description |
+| --- | --- |
 |""            | container of the whole argument             |
 |0.1           | number, in hours                            |
 |/             | delimiter for splitting time from message   |
