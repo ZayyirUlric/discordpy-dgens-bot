@@ -7,7 +7,15 @@ import random
 from threading import Timer
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='<PREFIX>')
+################################################################################################
+#                                 DEFINE VARIABLES HERE                                        #
+PREFIX = ""
+PATH_TO_DIR = "" # This is used for pointing to guild.csv
+TOKEN = ''
+#                                                                                              #
+################################################################################################
+
+bot = commands.Bot(command_prefix=PREFIX, help_command=None)
 sass = True
 talkback = False
 
@@ -20,9 +28,24 @@ async def on_ready():
 async def on_guild_join(guild):
     guild_talkback = {}
     guild_talkback[guild.id] = False
-    with open('<PATH_TO_DIR>', 'a') as f:
+    with open(PATH_TO_DIR, 'a') as f:
         for key in guild_talkback.keys():
             f.write("%s,%s\n"%(key,guild_talkback[key]))
+
+@bot.command()
+async def help(ctx):
+    help_info = '''
+```
+| Feature    | Arguments                  | Description                                     |
+|------------|----------------------------|-------------------------------------------------|
+| remindme   | <Hours> <Text>             | Reminds the user with a ping after X hours.     |
+| switch     | on | off                   | Switches `Mama mo mode` on or off.              |
+| print      | <text>                     | Prints text into an embed title.                |
+| ha         | on mention of "ha"         | Prints "hatdog" upon mention of "ha".           |
+| impostor   | on mention of "impostor"   | Prints if the user mentioned is an impostor.    |
+```
+'''
+    await ctx.send(help_info)
 
 @bot.command()
 async def print(ctx, arg):
@@ -44,20 +67,20 @@ async def remindme(ctx, *, arg):
 
 @bot.command()
 async def switch(ctx, arg):
-    with open('<PATH_TO_DIR>') as f:
+    with open(PATH_TO_DIR) as f:
         guild_talkback = dict(filter(None, csv.reader(f)))
     print(guild_talkback)
     id = ctx.message.guild.id
     tb = guild_talkback[str(id)]
     if arg == 'on' and tb == "False":
         guild_talkback[str(id)] = True
-        with open('<PATH_TO_DIR>', 'w') as f:
+        with open(PATH_TO_DIR, 'w') as f:
             for key in guild_talkback.keys():
                 f.write("%s,%s\n"%(key,guild_talkback[key]))
         await ctx.send(embed=discord.Embed(title="**[WARNING] MAMA MO MODE: ON**"))
     elif arg == 'off' and tb == "True":
         guild_talkback[str(id)] = False
-        with open('<PATH_TO_DIR>', 'w') as f:
+        with open(PATH_TO_DIR, 'w') as f:
             for key in guild_talkback.keys():
                 f.write("%s,%s\n"%(key,guild_talkback[key]))
         await ctx.send(embed=discord.Embed(title='**[WARNING] MAMA MO MODE: OFF**'))
@@ -69,7 +92,7 @@ async def on_message(message):
     ctx = await bot.get_context(message)
     if message.author == bot.user:
         return
-    if message.content.startswith('<PREFIX>'):
+    if message.content.startswith(PREFIX):
         await bot.invoke(ctx)
     if "ha" in message.content:
         await message.channel.send('hatdog')
@@ -89,7 +112,7 @@ async def on_message(message):
         else:
             imp_user = message.author.mention
         await message.channel.send("  . 　　　。　　　　•　 　ﾟ　　。 　　." + '\n' + "　.　　　 　　.　　　　　。　　 。　. 　" + '\n' + " .　　 。　　　　　 ඞ 。 . 　　 • 　　　　•" + '\n' + "."+imp_user+ " was "+imp_output+" Impostor.　 。　." + '\n' + "        　　　　   "+imp_count+" Impostor"+imp_s_1+" remain"+imp_s_2+" 　 　　。" + '\n' + "        　　ﾟ　　　.　　　. ,　　　　.　 .. 　　　。　　　　" + '\n' + "        •　 　ﾟ　　。 　　. 　　　。　　　　•　 　ﾟ　　。 ")
-    with open('<PATH_TO_DIR>') as csv_file:
+    with open(PATH_TO_DIR) as csv_file:
         reader = csv.reader(csv_file)
         guild_talkback = dict(reader)
     id = ctx.message.guild.id
@@ -97,6 +120,4 @@ async def on_message(message):
     if tb == "True":
         await message.channel.send('mama mo '+message.content)
 
-
-TOKEN = '<TOKEN>'
 bot.run(TOKEN)
