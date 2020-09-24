@@ -2,47 +2,30 @@
 
 The bot has some basic functions, mostly for entertainment.
 
-The bot was made using the `discord-py`, `csv`, `asyncio`, and `time` Python libraries.
+The bot was made using the `discord-py`, `csv`, `asyncio`, `random`, and `time` Python libraries.
 
 To use, replace the following:
 - `<TOKEN>` with your bot's token.
 - `<PREFIX>` with your preferred prefix.
-- `<PATH_TO_DIR>` with where your python script is.
+- `<PATH_TO_DIR>` with where your guild.csv file is.
 
 The bot has some features like:
 - Guild-specific states for commands like `switch`.
 - An actually helpful remindme command that pings the user after X-hours.
 
-The prefix used for the next examples is `MM`
+## Commands and Features Available
 
-## Commands Available
-
-1. remindme
-   - tags user after X hours
-     - MMremindme "\<hours>\/\<message>\"
-2. switch        
-   - switches `Mama mo mode` on and off. Guild specific.
-   - `Mama mo mode` when on repeates the last message with `mama mo` prefixing the message.
-     - MMswitch on|off 
-3. print         
-   - prints a message in an embed
-     - MMprint \<message>
-
-
-## Remindme Syntax
-| Part          | Description                                 |
-| ------------- | ------------------------------------------- |
-|MMremindme     | Command                                     |
-|"0.1/mama mo"  | Argument                                    |
-
-| Argument Part | Description                                 |
-| ------------- | ------------------------------------------- |
-|""             | container of the whole argument             |
-|0.1            | number, in hours                            |
-|/              | delimiter for splitting time from message   |
-|mama mo        | string to be printed after X hours          |
+| Command/Feature | Arguments                                   | Description                                   |
+| --------------- | ------------------------------------------- | --------------------------------------------- |
+|remindme         | <Hours> <Text>                              | Reminds the user with a ping after X hours.   |
+|switch           | on /| off                                   | Switches `Mama mo mode` on or off.            |
+|print            | <text>                                      | Prints text into an embed title.              |
+|ha               | *on mention of "ha"*                        | Prints "hatdog" upon mention of "ha".         |
+|impostor         | *on mention of "impostor"*                  | Prints if the user mentioned is an impostor.  |
 
 
 ## To Do
 
-- [ ] Remove the need for "" for parsing arguments
+- [/] Remove the need for "" for parsing arguments
+- [/] Improved remindme syntax
+- [ ] Convert all input to lowercase for parsing
