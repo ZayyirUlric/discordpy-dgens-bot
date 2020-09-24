@@ -17,15 +17,15 @@ The bot has some features like:
 
 | Command/Feature | Arguments                                   | Description                                   |
 | --------------- | ------------------------------------------- | --------------------------------------------- |
-|remindme         | <Hours> <Text>                              | Reminds the user with a ping after X hours.   |
-|switch           | on /| off                                   | Switches `Mama mo mode` on or off.            |
-|print            | <text>                                      | Prints text into an embed title.              |
+|remindme         | \<Hours> \<Text>                              | Reminds the user with a ping after X hours.   |
+|switch           | on \| off                                   | Switches `Mama mo mode` on or off.            |
+|print            | \<text>                                      | Prints text into an embed title.              |
 |ha               | *on mention of "ha"*                        | Prints "hatdog" upon mention of "ha".         |
 |impostor         | *on mention of "impostor"*                  | Prints if the user mentioned is an impostor.  |
 
 
 ## To Do
 
-- [/] Remove the need for "" for parsing arguments
-- [/] Improved remindme syntax
+- [x] Remove the need for "" for parsing arguments
+- [x] Improved remindme syntax
 - [ ] Convert all input to lowercase for parsing
