@@ -29,4 +29,4 @@ The bot has some features like:
 - [x] Remove the need for "" for parsing arguments
 - [x] Improved remindme syntax
 - [ ] Convert all input to lowercase for parsing
-- [ ] Add `help` command.
+- [x] Add `help` command.
