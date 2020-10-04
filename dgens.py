@@ -96,7 +96,7 @@ async def on_message(message):
         await bot.invoke(ctx)
     if "ha" in message.content:
         await message.channel.send('hatdog')
-    if "impostor" in message.content:
+    if ("impostor" in message.content) or ("sus" in message.content):
         if random.randint(1, 100) > 50:
             imp_output = "An"
             imp_count = "1"
