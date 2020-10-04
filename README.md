@@ -21,7 +21,7 @@ The bot has some features like:
 |switch           | on \| off                                   | Switches `Mama mo mode` on or off.            |
 |print            | \<text>                                     | Prints text into an embed title.              |
 |ha               | *on mention of "ha"*                        | Prints "hatdog" upon mention of "ha".         |
-|impostor         | *on mention of "impostor"*                  | Prints if the user mentioned is an impostor.  |
+|impostor         | *on mention of "impostor" or "sus"*         | Prints if the user mentioned is an impostor.  |
 
 
 ## To Do
