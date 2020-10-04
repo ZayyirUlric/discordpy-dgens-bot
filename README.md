@@ -7,7 +7,7 @@ The bot was made using the `discord-py`, `csv`, `asyncio`, `random`, and `time` 
 To use, replace the following:
 - `<TOKEN>` with your bot's token.
 - `<PREFIX>` with your preferred prefix.
-- `<PATH_TO_DIR>` with where your guild.csv file is.
+- `<PATH_TO_DIR>` with where your guilds.csv file is, i.e. `/home/user/discord-bot/guilds.csv`.
 
 The bot has some features like:
 - Guild-specific states for commands like `switch`.
